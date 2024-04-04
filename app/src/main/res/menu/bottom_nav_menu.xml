@@ -4,34 +4,33 @@
 
 
     <item
-        android:id="@+id/Home"
+        android:id="@+id/Weekly"
         android:enabled="true"
 
         android:icon="@drawable/ic_baseline_add_24"
-        android:title="home"
+        android:title="Weekly"
         app:showAsAction="ifRoom|withText"
         />
 
 
     <item
-        android:id="@+id/Social"
+        android:id="@+id/Calender"
 
         android:enabled="true"
         android:icon="@drawable/ic_baseline_add_24"
-        android:title="Social"
+        android:title="Calender"
         app:showAsAction="ifRoom|withText" />
+
     <item
-        android:id="@+id/Diagnoses"
-
-
+        android:id="@+id/Tasks"
         android:enabled="true"
-
         android:icon="@drawable/ic_baseline_add_24"
-        android:title="diagnoses"
+        android:title="Tasks"
         app:showAsAction="ifRoom|withText" />
+
     <item
-        android:id="@+id/Inbox"
-        android:title="Artists"
+        android:id="@+id/Profile"
+        android:title="Profile"
         android:enabled="true"
 
         android:icon="@drawable/ic_baseline_add_24"

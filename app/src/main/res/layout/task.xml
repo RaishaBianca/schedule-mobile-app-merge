@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="category">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Buttons go here -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 1"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 2"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 3"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 4"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 5"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category 6"
+                android:textSize="11sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_green"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalScrollView"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:id="@+id/additionalButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/floatingActionButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="button 1"
+            android:layout_marginBottom="16dp"
+            app:elevation="0dp"
+            app:backgroundTint="@color/dark_salmon"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="button 2"
+            android:layout_marginBottom="16dp"
+            app:elevation="0dp"
+            app:backgroundTint="@color/dark_salmon"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:contentDescription="add button"
+        app:elevation="0dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/green"
+        app:itemTextColor="@color/green"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

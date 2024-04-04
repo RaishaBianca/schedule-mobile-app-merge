@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.drawable.ColorDrawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.TextAppearanceSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -19,61 +17,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private MyAdapter adapter;
-    private List<MyItem> itemList;
-    private FloatingActionButton mainFloatingButton;
-    private LinearLayout additionalButtonsLayout;
-    private boolean isAdditionalButtonsVisible = false;
-
+    private Button loginBtn;
+    private TextView textRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        loginBtn = findViewById(R.id.loginBtn);
 
-        itemList = new ArrayList<>();
-        itemList.add(new MyItem("UTS", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("UAS", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Tubes", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Praktikum", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Kuis", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Tugas", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Ujian", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Kerja Praktek", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Seminar", "Senin, 20 Maret 2024 13:00"));
-
-        adapter = new MyAdapter(itemList, this);
-        recyclerView.setAdapter(adapter);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
-
-
-        mainFloatingButton = findViewById(R.id.floatingActionButton);
-        additionalButtonsLayout = findViewById(R.id.additionalButtonsLayout);
-
-        mainFloatingButton.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toggleAdditionalButtonsVisibility();
-                FormDialogFragment dialog = new FormDialogFragment();
-                dialog.show(getSupportFragmentManager(), "FormDialogFragment");
+                startActivity(new Intent(MainActivity.this, Task.class));
             }
         });
 
-    }
-
-    private void toggleAdditionalButtonsVisibility() {
-        if (isAdditionalButtonsVisible) {
-            additionalButtonsLayout.setVisibility(View.GONE);
-        } else {
-            additionalButtonsLayout.setVisibility(View.VISIBLE);
-        }
-        isAdditionalButtonsVisible = !isAdditionalButtonsVisible;
+        textRegister = findViewById(R.id.textRegister);
+        textRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Register.class));
+            }
+        });
     }
 }

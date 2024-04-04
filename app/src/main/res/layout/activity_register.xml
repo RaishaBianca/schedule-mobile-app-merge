@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/classleap"/>
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -46,7 +47,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome"
+                android:text="Daftar"
                 android:textColor="@color/dark_blue"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -54,12 +55,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Please login with your information"
+                android:text="Please fill with your information"
                 android:alpha="0.7" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:alpha="0.7"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/done_icon"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIM"
+                android:alpha="0.7"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/done_icon"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,11 +139,15 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
+                    android:id="@+id/tvLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="I forgot my password"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:text="Sudah punya akun? Login"
+                    android:textColor="@color/dark_blue"
+                    tools:ignore="TouchTargetSizeCheck" />
 
 
             </RelativeLayout>
@@ -122,27 +157,13 @@
                 android:layout_height="10dp" />
 
             <Button
+                android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 style="@style/ButtonGeneral"
                 android:layout_height="60dp"
-                android:text="Login"
-                app:cornerRadius="32dp"
-                android:id="@+id/loginBtn"/>
+                android:text="Daftar"
+                app:cornerRadius="32dp" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-            <TextView
-                android:id="@+id/textRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                android:minHeight="48dp"
-                android:text="Belum punya akun? Daftar sekarang!"
-                android:textColor="@color/dark_blue" />
 
         </LinearLayout>
 

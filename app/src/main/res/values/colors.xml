@@ -8,4 +8,5 @@
     <color name="colorText">#282C2F</color>
     <color name="salmon">#FF9B7D</color>
     <color name="dark_salmon">#FB785A</color>
+    <color name="background">#EFEDED</color>
 </resources>
