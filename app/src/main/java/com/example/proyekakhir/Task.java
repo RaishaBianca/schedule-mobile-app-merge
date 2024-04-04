@@ -59,7 +59,6 @@ public class Task extends AppCompatActivity {
                 dialog.show(getSupportFragmentManager(), "FormDialogFragment");
             }
         });
-
     }
 
     private void toggleAdditionalButtonsVisibility() {
