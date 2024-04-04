@@ -13,12 +13,6 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".EditProfile"
-            android:exported="false" />
-        <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -36,8 +30,6 @@
         <activity
             android:name=".Task"
             android:exported="false" />
-
-
     </application>
 
 </manifest>
