@@ -35,22 +35,20 @@ public class Task extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         itemList = new ArrayList<>();
-        itemList.add(new MyItem("UTS", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("UAS", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Tubes", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Praktikum", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Kuis", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Tugas", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Ujian", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Kerja Praktek", "Senin, 20 Maret 2024 13:00"));
-        itemList.add(new MyItem("Seminar", "Senin, 20 Maret 2024 13:00"));
+        itemList.add(new MyItem("UTS", "13:00"));
+        itemList.add(new MyItem("UAS", "14:00"));
+        itemList.add(new MyItem("Tubes", "15:00"));
+        itemList.add(new MyItem("Praktikum", "16:00"));
+        itemList.add(new MyItem("Tugas", "17:00"));
+        itemList.add(new MyItem("Kuis", "18:00"));
+        itemList.add(new MyItem("Ujian", "19:00"));
+        itemList.add(new MyItem("Kerja Praktek", "20:00"));
+        itemList.add(new MyItem("Kerja Lapangan", "21:00"));
+        itemList.add(new MyItem("Kerja Magang", "22:00"));
+        itemList.add(new MyItem("Kerja Karyawan", "23:00"));
 
         adapter = new MyAdapter(itemList, this);
         recyclerView.setAdapter(adapter);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
 
 
         mainFloatingButton = findViewById(R.id.floatingActionButton);

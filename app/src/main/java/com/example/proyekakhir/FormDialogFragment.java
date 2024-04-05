@@ -38,7 +38,7 @@ public class FormDialogFragment extends DialogFragment {
         titleEditText = view.findViewById(R.id.titleEditText);
 
         builder.setView(view)
-                .setTitle("Task")
+                .setTitle("Add New")
                 .setPositiveButton("OK", (dialog, which) -> {
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> {

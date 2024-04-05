@@ -32,24 +32,20 @@ public class Calender extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         itemList = new ArrayList<>();
 
-        itemList.add(new MyItem("Tadarus", "05:00"));
-        itemList.add(new MyItem("Pertemuan", "05:30"));
-        itemList.add(new MyItem("Kerkom", "06:00"));
-        itemList.add(new MyItem("Libur Natal", "07:00"));
-        itemList.add(new MyItem("Libur Tahun Baru", "08:00"));
-        itemList.add(new MyItem("Libur Imlek", "09:00"));
-        itemList.add(new MyItem("Libur Paskah", "10:00"));
-        itemList.add(new MyItem("Libur Idul Fitri", "11:00"));
-        itemList.add(new MyItem("Libur Idul Adha", "12:00"));
-        itemList.add(new MyItem("Libur Maulid Nabi", "13:00"));
-        itemList.add(new MyItem("Libur Waisak", "14:00"));
+        itemList.add(new MyItem("Tadarus", "15 Maret 2024 05:00"));
+        itemList.add(new MyItem("Libur", "15 Maret 2024 08:00"));
+        itemList.add(new MyItem("Pertemuan", "15 Maret 2024 09:00"));
+        itemList.add(new MyItem("Kuliah", "15 Maret 2024 10:00"));
+        itemList.add(new MyItem("Bukber", "15 Maret 2024 11:00"));
+        itemList.add(new MyItem("Hang Out", "15 Maret 2024 12:00"));
+        itemList.add(new MyItem("Acara1", "15 Maret 2024 13:00"));
+        itemList.add(new MyItem("Acara2", "15 Maret 2024 14:00"));
+        itemList.add(new MyItem("Acara3", "15 Maret 2024 15:00"));
+        itemList.add(new MyItem("Acara4", "15 Maret 2024 16:00"));
+        itemList.add(new MyItem("Acara5", "15 Maret 2024 17:00"));
 
         adapter = new CalenderAdapter(itemList, this);
         recyclerView.setAdapter(adapter);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
 
 
         mainFloatingButton = findViewById(R.id.floatingActionButton);

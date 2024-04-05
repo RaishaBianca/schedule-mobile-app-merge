@@ -311,7 +311,7 @@
             android:layout_marginBottom="16dp"
             app:elevation="0dp"
             app:backgroundTint="@color/dark_salmon"
-            app:srcCompat="@drawable/baseline_edit_calendar_24"
+            app:srcCompat="@drawable/baseline_checklist_24"
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -322,7 +322,7 @@
             android:layout_marginBottom="16dp"
             app:elevation="0dp"
             app:backgroundTint="@color/dark_salmon"
-            app:srcCompat="@drawable/baseline_checklist_24"
+            app:srcCompat="@drawable/baseline_edit_calendar_24"
             />
 
     </LinearLayout>
