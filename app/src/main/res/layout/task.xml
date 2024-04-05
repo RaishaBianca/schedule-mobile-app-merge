@@ -23,7 +23,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <!-- Buttons go here -->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,6 +124,7 @@
             android:layout_marginBottom="16dp"
             app:elevation="0dp"
             app:backgroundTint="@color/dark_salmon"
+            app:srcCompat="@drawable/baseline_edit_calendar_24"
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -135,6 +135,7 @@
             android:layout_marginBottom="16dp"
             app:elevation="0dp"
             app:backgroundTint="@color/dark_salmon"
+            app:srcCompat="@drawable/baseline_checklist_24"
             />
 
     </LinearLayout>
@@ -152,14 +153,11 @@
         android:contentDescription="add button"
         app:elevation="0dp"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <include
         android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        layout="@layout/base_layout"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/green"
-        app:itemTextColor="@color/green"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

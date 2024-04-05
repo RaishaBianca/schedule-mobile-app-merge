@@ -5,31 +5,26 @@
 
     <item
         android:id="@+id/Weekly"
-        android:enabled="true"
         android:icon="@drawable/baseline_calendar_view_week_24"
         android:title="Weekly"
-        app:showAsAction="ifRoom|withText"
         />
 
 
     <item
         android:id="@+id/Calender"
-        android:enabled="false"
         android:icon="@drawable/baseline_edit_calendar_24"
         android:title="Calender"
-        app:showAsAction="ifRoom|withText" />
+        />
 
     <item
         android:id="@+id/Tasks"
-        android:enabled="false"
         android:icon="@drawable/baseline_checklist_24"
         android:title="Tasks"
-        app:showAsAction="ifRoom|withText" />
+         />
 
     <item
         android:id="@+id/Profile"
         android:title="Profile"
-        android:enabled="false"
         android:icon="@drawable/outline_co_present_24"
-        app:showAsAction="ifRoom|withText" />
+         />
 </menu>

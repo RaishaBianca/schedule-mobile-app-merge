@@ -13,27 +13,33 @@ import androidx.fragment.app.DialogFragment;
 
 public class FormDialogFragment extends DialogFragment {
 
+    private static final String ARG_LAYOUT = "layout";
     private EditText titleEditText;
     private EditText dateEditText;
     private EditText timeEditText;
+
+    public static FormDialogFragment newInstance(int layout) {
+        FormDialogFragment fragment = new FormDialogFragment();
+        Bundle args = new Bundle();
+        args.putInt(ARG_LAYOUT, layout);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.form_layout, null);
+
+        int layout = getArguments().getInt(ARG_LAYOUT);
+        View view = inflater.inflate(layout, null);
 
         titleEditText = view.findViewById(R.id.titleEditText);
-        dateEditText = view.findViewById(R.id.dateEditText);
-        timeEditText = view.findViewById(R.id.timeEditText);
 
         builder.setView(view)
                 .setTitle("Task")
                 .setPositiveButton("OK", (dialog, which) -> {
-                    String title = titleEditText.getText().toString();
-                    String date = dateEditText.getText().toString();
-                    String time = timeEditText.getText().toString();
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> {
                     dismiss();
